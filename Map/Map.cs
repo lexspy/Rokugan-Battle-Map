@@ -2,7 +2,7 @@ using System.Drawing;
 
 public class RokuganMap
 {
-    public List<Castle> Castles { get; set; }
+    public List<Settlement> Castles { get; set; }
     public List<Army> Armies { get; set; }
 
 
@@ -11,10 +11,10 @@ public class RokuganMap
 
     public RokuganMap()
     {
-        Castles = new List<Castle>();
+        Castles = new List<Settlement>();
         Armies = new List<Army>();
     }
-    public RokuganMap(List<Castle> castles, List<Army> armies)
+    public RokuganMap(List<Settlement> castles, List<Army> armies)
     {
         Castles = castles;
         Armies = armies;
@@ -22,7 +22,7 @@ public class RokuganMap
 
     public RokuganMap InitializeRokuganMap()
     {
-        return new RokuganMap(Castles,Armies);
+        return new RokuganMap(Castles, Armies);
     }
 
     public void DrawRokuganMap(RokuganMap map)
@@ -37,7 +37,7 @@ public class RokuganMap
         // ...
     }
 
-    public List<Castle> GenerateCastles(List<Clan> clans)
+    public List<Settlement> GenerateCastles(List<Clan> clans)
     {
         Dictionary<string, List<string>> clanSubregions = new Dictionary<string, List<string>>
         {
@@ -52,7 +52,7 @@ public class RokuganMap
             // Add remaining clan subregions
         };
 
-        List<Castle> castles = new List<Castle>();
+        List<Settlement> castles = new List<Settlement>();
 
         foreach (Clan clan in clans)
         {
@@ -60,7 +60,7 @@ public class RokuganMap
             {
                 foreach (string subregion in subregions)
                 {
-                    Castle castle = new Castle(subregion, new Coordinate { X = 0, Y = 0 }, clan);
+                    Settlement castle = new Settlement(subregion, new Coordinate { X = 0, Y = 0 }, clan);
 
                     castles.Add(castle);
                 }
@@ -88,37 +88,119 @@ public class RokuganMap
     }
 }
 
-public class Castle
+public enum SettlementType
 {
-    
+    Palace,
+    Castle,
+    City,
+    Village
+}
+
+public class Settlement
+{
+
 
     public string Name { get; set; }
     public Coordinate Location { get; set; }
-    public Clan Owner { get; set; }
+    public General Commander { get; set; }
+    public List<Settlement> Neighbors { get; set; }
+    public SettlementType Type { get; set; }
 
-    public Castle(string name, Coordinate location, Clan owner)
+
+    public Settlement(string name, Coordinate location, General commander, SettlementType type)
     {
         Name = name;
         Location = location;
-        Owner = owner;
+        Commander = commander;
+        Neighbors = new List<Settlement>();
+        Type = type;
+    }
+
+    public void AddNeighbor(Settlement neighbor)
+    {
+        if (!Neighbors.Contains(neighbor))
+        {
+            Neighbors.Add(neighbor);
+            neighbor.AddNeighbor(this);
+        }
+    }
+
+    public override string ToString()
+    {
+        return $"Settlement Name: {Name}, Location: {Location}, Commander: {Commander}";
     }
 }
 
 public class Army
 {
     public string Name { get; set; }
-    public int NumberOfBattalions { get; set; }
+    public int Size { get; set; }
+    public List<Unit> Units { get; set; } 
     public General General { get; set; }
     public Clan Affiliation { get; set; }
-    public Castle TargetCastle { get; set; }
+    public Settlement TargetCastle { get; set; }
 
-    public Army(string name, int numberOfBattalions, General general, Castle targetCastle)
+    public Army(string name, int numberOfBattalions, General general, Settlement targetCastle)
     {
         Name = name;
-        NumberOfBattalions = numberOfBattalions;
+        Size = numberOfBattalions;
         General = general;
         Affiliation = general.Affiliation;
         TargetCastle = targetCastle;
+    }
+}
+
+public class Unit
+{
+    public string Name { get; set; }
+    public UnitType Type { get; set; }
+    public int Level { get; set; }
+    public int Size { get; set; }
+    public General Commander { get; set; }
+    public int WeaponBonus { get; set; }
+    public int AC { get; set; }
+    public int ArmorBonus { get; set; }
+    public int ATK { get; set; }
+    public int DisciplineDC { get; set; }
+    public int TotalCR { get; set; }
+    public int ImprovementPoints { get; set; }
+    public Training Rank
+    {
+        get
+        {
+            return (Training)(Level - 1);
+        }
+        set
+        {
+            Level = (int)value + 1;
+        }
+    }
+
+    public Unit(string name, UnitType type, int level, int size, General commander)
+    {
+        Name = name;
+        Type = type;
+        Level = level;
+        Size = size;
+        Commander = commander;
+    }
+
+    public enum UnitType
+    {
+        Archery,
+        Caster,
+        Cavalry,
+        Infantry,
+        Scout,
+        Siege
+    }
+
+    public enum Training
+    {
+        Green,
+        Trained,
+        Veteran,
+        Elite
     }
 }
 
