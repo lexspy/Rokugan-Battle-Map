@@ -76,6 +76,7 @@ public class RokuganMap
             new Clan("Crab", Color.Blue),
             new Clan("Crane", Color.LightBlue),
             new Clan("Dragon", Color.Green),
+            new Clan("Imperial", Color.GreenYellow),
             new Clan("Lion", Color.Yellow),
             new Clan("Mantis", Color.Teal),
             new Clan("Phoenix", Color.OrangeRed),
@@ -90,10 +91,12 @@ public class RokuganMap
 
 public enum SettlementType
 {
-    Palace,
+    Palace, 
     Castle,
     City,
-    Village
+    Village,
+    Temple,
+    Shrine
 }
 
 public class Settlement
@@ -139,6 +142,7 @@ public class Army
     public General General { get; set; }
     public Clan Affiliation { get; set; }
     public Settlement TargetCastle { get; set; }
+    public Coordinate Location { get; set; }
 
     public Army(string name, int numberOfBattalions, General general, Settlement targetCastle)
     {
@@ -147,6 +151,7 @@ public class Army
         General = general;
         Affiliation = general.Affiliation;
         TargetCastle = targetCastle;
+        Location = TargetCastle.Location();
     }
 }
 
@@ -197,7 +202,7 @@ public class Unit
 
     public enum Training
     {
-        Green,
+        Newbie,
         Trained,
         Veteran,
         Elite
