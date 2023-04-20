@@ -1,30 +1,32 @@
 Clan,Family,Province,Name,Japanese Name,X,Y,Type,Commander
-Crab,Asahina,Anshin,Wall Above the Ocean Village,Yama ue no ho ni Umi Mura,43,60,Village,Asahina Tetsuya
 Crab,Hida,Kyoukan,Hida Castle,Kyuden Hida,22,77,Palace,Hida Kenshin
 Crab,Hiruma,Ienikaeru,Daylight Castle,Shiro Hiruma,12,76,Castle,Hiruma Yojiro
 Crab,Kaiu,Kuda,Chery Blossom Snow Village,Maemikake,29,65,Village,Kaiu Taiki
 Crab,Kaiu,Yoake,Carpenter Castle,Shiro Kaiu,13,64,Castle,Kaiu Kiyoshi
 Crab,Kaiu,Yoake,Razor of the Dawn Castle,Kamisori sano Yoake Shiro,15,61,Castle,Kaiu Ryotaro
 Crab,Kuni,Adauchi,Castle of the Nation,Shiro Kuni,17,70,Castle,Kuni Yori
-Crab,Yasuki,Junkin,Friendly Traveler Village,Aiso ni Ryokosha Mura,24,84,Village,Yasuki Taka
+Crab,Suzume,Suzume,Castle of the Sparrow,Kyuden Suzume,26,69,Palace,Suzume Yugoki
+Crab,Toritaka,Toritaka,Castle of the Falcon,Shiro Toritaka,16,50,Castle,Toritaka Noboru
 Crab,Yasuki,Junkin,Black Crane Estates,Yasuki Yashiki,28,74,Village,Yasuki Fumiki
-Crane,Asahina,Shinkyou,Temple of the Morning Sun,Shinden Asahina,30,79,Village,Asahina Keitaro
+Crab,Yasuki,Junkin,Friendly Traveler Village,Aiso ni Ryokosha Mura,24,84,Village,Yasuki Taka
+Crane,Asahina,Anshin,Wall Above the Ocean Village,Yama ue no ho ni Umi Mura,43,60,Village,Asahina Tetsuya
+Crane,Asahina,Shinkyou,Temple of the Morning Sun,Shinden Asahina,30,79,Temple,Asahina Keitaro
 Crane,Asahina,Wakiaiai,The Port That Never Sleeps,Jukami Mura,34,68,Village,Asahina Takumi
 Crane,Daidoji,Hayaku,Son of the Crane Castle,Shiro Daidoji,40,41,Castle,Daidoji Uji
 Crane,Doji,Kazenmuketsu,The Quiet City,Shizuka Toshi,43,43,City,Doji Hoturi
 Crane,Kakita,Takuetsu,Palace Kakita,Kyuden Kakita,42,40,Palace,Kakita Toshimoko
 Crane,Kakita,Takuetsu,Tsuma,Tsuma,44,41,Village,Kakita Kaori
+Crane,Tsuruchi,Ashinagabachi,Castle of the Wasp,Kyuden Ashinagabachi,40,48,Palace,Tsuruchi Yoji
+Crane,Usagi,Usagi,Castle of the Hare,Shiro Usagi,28,57,Castle,Usagi Oda
+Dragon,Hiragana,Togashi,Farthest Fortress,Jousai Tengai,27,6,Village,Hiragana Katakana
 Dragon,Kitsuki,Shinpi,Last Step Castle,Shiro Kitsuki,32,18,Castle,Kitsuki Yasu
+Dragon,Mirumoto,Togashi,High House of Light,Kyuden Togashi,30,9,Palace,Shiba Yotsuke
 Dragon,Mirumoto,Toshibu,Last Glance Castle,Shiro Mirumoto,37,17,Castle,Mirumoto Hitomi
 Dragon,Tamori,Kinenkan,Fire Tooth Castle,Shiro Tamori,36,14,Castle,Tamori Chieko
-Dragon,Tamori,Togashi,High House of Light,Kyuden Togashi,30,9,Palace,Togashi Mitsu
-Dragonfly,Tonbo,Shinpi,Castle of the Dragonfly,Kyuden Tonbo,34,21,Palace,Tonbo Toryu
-Falcon,Toritaka,Toritaka,Castle of the Falcon,Shiro Toritaka,16,50,Castle,Toritaka Noboru
-Fox,Kitsune,Kitsune,Castle of the Fox,Kyuden Kitsune,29,65,Palace,Kitsune Ryosei
-Hare,Usagi,Usagi,Castle of the Hare,Shiro Usagi,28,57,Castle,Usagi Oda
+Dragon,Tonbo,Shinpi,Castle of the Dragonfly,Kyuden Tonbo,34,21,Palace,Tonbo Toryu
 Imperial,Choryu,Choryu,Slow Tide Harbor,Taimana Choryu,48,37,Village,Choryu Akira
-Imperial,Hantei,Yogasha,Castle of the Emerald Champion,Shiro Yogasha,44,30,Castle,Hantei Takashi
-Imperial,Hantei,Imperial,The Imperial City,Otosan Uchi,46,38,Village,Hantei Yoshi
+Imperial,Iweko,Imperial,The Imperial City,Otosan Uchi,46,38,Village,Hantei Yoshi
+Imperial,Iweko,Yogasha,Castle of the Emerald Champion,Shiro Yogasha,44,30,Castle,Utaku Ji-Yun
 Lion,Akodo,Ken-ryu,Loyalty Castle,Shiro Akodo,43,34,Castle,Akodo Toturi
 Lion,Akodo,Kokoro,Authorized City,Ninkatoshi,42,27,City,Akodo Kage
 Lion,Ikoma,Gunsho,Sacred Watch Palace,Kyuden Ikoma,32,32,Palace,Ikoma Ujiaki
@@ -32,24 +34,23 @@ Lion,Kitsu,Haiya,Castle of the Swift Sword,Shiro sano Ken Hayai,31,24,Castle,Kit
 Lion,Kitsu,Rugashi,Rugashi City,Rugashi Toshi,34,27,City,Kitsu Takashi
 Lion,Matsu,Kaeru,City of the Rich Frog,Kaeru Toshi,25,23,City,Matsu Tsuko
 Lion,Matsu,Yama,Last Breath Castle,Shiro Matsu,37,37,Castle,Matsu Gohei
+Mantis,Kitsune,Kitsune,Castle of the Fox,Kyuden Kitsune,29,65,Palace,Kitsune Ryosei
 Mantis,Moshi,Hinome,Castle of the Centipede,Kyuden Moshi,44,30,Palace,Moshi Wakiza
 Mantis,Yoritmo,Inazuma Island,City of Lightning,Toshi no Inazuma,43,79,City,Yoritomo Arashi
 Mantis,Yoritomo,Gotei Island,Palace of the Mantis,Kyuden Gotei,49,74,Palace,Yoritomo Naizen
 Phoenix,Asako,Yogen,Morning Glory Castle,Kyuden Asako,49,19,Palace,Asako Togama
 Phoenix,Isawa,Maryoku,Isawa Elemental Academies,Kyuden Isawa,52,11,Palace,Isawa Tsuke
-Phoenix,Kaito,Garanto,Cliffside Shrine,Sanpuku Seid?,52,5,Village,Kaito Kosori
+Phoenix,Kaito,Garanto,Cliffside Shrine,Sanpuku Seido,52,5,Shrine,Kaito Kosori
+Phoenix,Shiba,Kokoro,Violence Behind Courtliness City,Toshi Ranbo,39,24,City,Ronin Tatsuya
 Phoenix,Shiba,Nejiro,Castle Shiba,Shiro Shiba,53,17,Castle,Shiba Tsukune
-Ronin,Ronin,Kokoro,Violence Behind Courtliness City,Toshi Ranbo,39,24,City,Ronin Tatsuya
 Scorpion,Bayushi,Kunizakai,Silk and Shadow Palace,Kyuden Bayushi,31,45,Palace,Bayushi Shoju
 Scorpion,Shosuro,Kawa,Castle of Pretending,Shiro no Shosuro,29,43,Castle,Shosuro Hametsu
 Scorpion,Shosuro,Ryoko,City of Lies,Ryoko Owari Toshi,27,36,City,Shosuro Yudoka
 Scorpion,Soshi,An'ei,Castle of Organization,Shiro no Soshi,26,33,Castle,Soshi Bantaro
 Scorpion,Yogo,Beiden,Beiden City,Beiden,32,31,Village,Yogo Junzo
 Scorpion,Yogo,Fukitsu,Castle of Learning,Shiro Yogo,31,39,Castle,Yogo Koji
-Sparrow,Suzume,Suzume,Castle of the Sparrow,Kyuden Suzume,26,69,Palace,Suzume Yugoki
 Unicorn,Ide,Garanto,Great Day Castle,Shiro Ide,14,29,Castle,Ide Tadaji
 Unicorn,Iuchi,Kaihi,Gatherer of Winds Castle,Shiro Iuchi,22,27,Castle,Iuchi Daiyu
 Unicorn,Moto,Khanbulak,City of the Khan,Khanbulak,5,18,Village,Moto Chagatai
 Unicorn,Shinjo,Kouryo,Far Traveler Castle,Shiro Shinjo,15,14,Castle,Shinjo Yasamura
 Unicorn,Utaku,Manaka,Battle Maiden Castle,Shiro Utaku Shojo,17,17,Castle,Utaku Kamoko
-Wasp,Tsuruchi,Ashinagabachi,Castle of the Wasp,Kyuden Ashinagabachi,40,48,Palace,Tsuruchi Yoji
