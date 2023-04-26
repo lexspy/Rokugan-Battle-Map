@@ -26,12 +26,19 @@ public class Clan
     public int Structure => Math.Max(MightMod, Math.Max(WealthMod, Math.Max(InfluenceMod, Math.Max(IntrigueMod, KnowledgeMod)))) + Scope;    
     public int MaxStability => 25 + Structure;    
     public int CurrentStability { get; set; }    
-    public int CurrentPlotPoints { get; set; } = 0;
+    public int CurrentPlotPoints { get; set; }
+    public IClanAI AI { get; set; }
 
-    public Clan(string name, Color emblemColor)
+    public Clan(string name, Color emblemColor, ClanType type)
     {
         Name = name;
         EmblemColor = emblemColor;
         CurrentStability = MaxStability;
+        CurrentPlotPoints = 0;
+    }
+
+    public Clan(string name, Color emblemColor, ClanType type, IClanAI ai) : this(name, emblemColor, type)
+    {
+        AI = ai;
     }
 }
